@@ -2,12 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>new-page-api-nasa</title>
+    <title>Cool New Page!</title>
+    <link rel="stylesheet" href="/src/style.css">
   </head>
   <body>
     <div id="app"></div>
+    
+    <!--Upper screen of Dsi-->
+    <div id="container">
+        <div id="green1">
+          <div class="speaker"></div>
+          <div id="screen1">
+            <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+            <input name="sitesearch" type="hidden" value="">
+            <input autocomplete="on" class="form-control search" name="q" placeholder="" required="required"  type="text">
+            
+            </form>
+          </div>
+          <div class="speaker"></div>
+        </div>
+    </div>
+    <!--Middle part of Dsi-->
+    <div id="container">
+      <div id="middle">
+        <div id="camera"></div>
+      </div>
+    </div>
+    <!--2nd screen of Dsi-->
+    <div id="container">
+      <div id="green1">
+        <div id="cross">
+         
+        </div>
+        
+        <div id="screen1"></div>
+        <div id="cross">
+         
+        </div>
+      </div>
+    </div>
+
+
+    
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
