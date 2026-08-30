@@ -3,7 +3,10 @@ const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 const cross = document.getElementById("cross")
 const cross2 = document.getElementById("cross2")
 let time 
-
+let author
+let title
+let numOpciones = 0
+let opciones
 //API Call to NASA to get info
 document.querySelector("#app").innerHTML = ""
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`).then(response => response.json())
@@ -19,8 +22,12 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`).then(response =>
     {
       media = `<video src="${data.url}" controls></video>`
     }
-
+    
     document.querySelector("#screen1").innerHTML = `<a href="https://apod.nasa.gov/apod/astropix.html">${media}</a>`
+    
+    author = data.copyright;
+    title = data.title;
+
     
 
 }).catch(err => {
@@ -32,13 +39,15 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`).then(response =>
 // Shows all the info
 function showElements()
 {
-   let opciones = [`<p id="time"></p>
+    opciones = [`<p id="time"></p>
             <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
             <input name="sitesearch" type="hidden" value="" placeholder="">
             <input autocomplete="on" class="form-control search" name="q" placeholder="Search for Something!" required=""  type="text" style="border-radius: 15px; border: 1px solid black;"></form>`,
+            `<h2>Author: </h2> <p>${author}</p>
+             <h2>Title: </h2> <p>${title}</p>`,
   ] 
-let numOpciones = 0
-
+  
+  
   //prints the info in the screen
   document.querySelector("#screen2").innerHTML = opciones[numOpciones];
   getTime();
@@ -72,6 +81,8 @@ function funcOpcion()
   }
   showElements();
 }
+
+
 
 // what happens when you press D-pad
 cross.addEventListener("click", funcOpcion);
