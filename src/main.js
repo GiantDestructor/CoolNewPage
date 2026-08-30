@@ -52,6 +52,15 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`).then(response =>
     document.querySelector("#screen1").innerHTML = `<a href="https://apod.nasa.gov/apod/astropix.html">${media}</a>`
     
     author = data.copyright;
+    //What happens if no author is given
+    if (author == null)
+    {
+      author = "No authors given";
+    } else
+    {
+      author = data.copyright;
+     }
+      
     title = data.title;
 
     
@@ -69,7 +78,8 @@ function showElements()
             <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
             <input name="sitesearch" type="hidden" value="" placeholder="">
             <input autocomplete="on" class="form-control search" name="q" placeholder="Search for Something!" required=""  type="text" style="border-radius: 15px; border: 1px solid black;"></form>
-            <p>Try clicking the D-pad!</p>`,
+            <p>Try clicking the D-pad!</p>
+            <img src="https://static.thenounproject.com/png/1939979-200.png" alt="" style="height: 20px; width: 20px;" id ="sound">`,
             `<h2>Author: </h2> <p>${author}</p>
              <h2>Title: </h2> <p>${title}</p>`,
   ] 
@@ -78,9 +88,7 @@ function showElements()
   //prints the info in the screen
   document.querySelector("#screen2").innerHTML = opciones[numOpciones];
   getTime();
-  music.loop = true;
-  music.volume = 0.2;
-  music.play();
+  
   
 
 }
@@ -126,6 +134,46 @@ cross2.addEventListener("click", funcOpcion);
 cross.addEventListener("touchend", funcOpcion);
 cross2.addEventListener("touchend", funcOpcion);
 
+
+//Adds event to the sound image
+const sound = document.getElementById("sound");
+let soundcheck = false;
+
+sound.addEventListener("touchend", function (event)
+{
+  if(soundcheck == false){
+    console.log(event);
+    click.play()
+    music.loop = true;
+    music.volume = 0.2;
+    music.play();
+    soundcheck = true;
+  } else
+  {
+    click.play()
+    music.pause();
+    soundcheck = false;
+   }
+
+ })
+
+sound.addEventListener("click", function (event)
+{
+  if(soundcheck == false){
+    console.log(event);
+    click.play()
+    music.loop = true;
+    music.volume = 0.2;
+    music.play();
+    soundcheck = true;
+  } else
+  {
+    click.play()
+    music.pause();
+    soundcheck = false;
+   }
+
+ })
 //plays the sound of the keyboard
 document.addEventListener("keydown", function(event) {
   console.log(`Key pressed: ${event.key}`);
