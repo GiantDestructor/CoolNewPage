@@ -1,8 +1,38 @@
 ## Cool New Page!
 Is a cool new page that I would love to see each time I enter a browser, it´s inspired on a handheld design that I love
-<img width="1845" height="701" alt="image" src="https://github.com/user-attachments/assets/09f9da1e-61a4-4481-bcc3-51e63a05dfc2" />
+<img width="1844" height="832" alt="image" src="https://github.com/user-attachments/assets/9c45bccd-0af1-4487-aca1-6b5092b87d23" />
 
 
+Give it a try! (https://giantdestructor.github.io/CoolNewPage/)
+
+## ¿Whats Cool about this?
+- You have a searchbar to look for anything you want on the web
+- You can watch a photo of the universe everyday and get to know the author name!
+- You have a nostalgic view and sound of a good old dsi
+- When you write, you hear pictochat keyboard sounds
+- Live clock!
+
+## How to run on your PC?
+Firts of all make sure that you have *NodeJs* and *npm*
+
+Clone the repository:
+
+```bash
+git clone https://github.com/GiantDestructor/CoolNewPage.git
+```
+Enter the project directory:
+```
+cd CoolNewPage
+```
+Install the dependencies:
+```
+npm install
+```
+Start the development server:
+```
+npm run dev
+```
+and then feel free to add whatever you want!
 
 ## Resources Used
 1. Add Google Searchar (https://stackoverflow.com/questions/13822927/how-can-i-add-a-google-search-box-to-my-website)
