@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "dsFont";
+  src: url(fonts/nintendo_ds_bios.ttf);
+}
+
 body
 {
   margin: 0;
@@ -6,6 +11,13 @@ body
   position: relative;
   background: url(https://i.pinimg.com/1200x/63/a9/be/63a9be9945e295b9341dc00d13406b76.jpg);
   background-size: cover;
+  font-family: "dsFont", Arial, Helvetica, sans-serif;
+}
+
+input
+{
+  font-family: "dsFont", Arial, Helvetica, sans-serif;
+
 }
 
 #container
