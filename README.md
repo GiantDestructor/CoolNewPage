@@ -3,7 +3,7 @@ Is a cool new page that I would love to see each time I enter a browser, it´s i
 <img width="1844" height="832" alt="image" src="https://github.com/user-attachments/assets/9c45bccd-0af1-4487-aca1-6b5092b87d23" />
 
 
-Give it a try! (https://giantdestructor.github.io/CoolNewPage/)
+Give it a try! (https://giantdestructor.github.io/DSi-New-Page/)
 
 ## ¿Whats Cool about this?
 - You have a searchbar to look for anything you want on the web
