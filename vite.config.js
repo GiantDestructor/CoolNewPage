@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/CoolNewPage/',
+  base: '/DSi-New-Page/',
 })
